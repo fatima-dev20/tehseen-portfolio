@@ -1,4 +1,3 @@
-// src/components/Footer.jsx
 import { FaHeart } from "react-icons/fa";
 import { ArrowUp } from "lucide-react";
 

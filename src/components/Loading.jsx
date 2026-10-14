@@ -35,7 +35,7 @@ const Loading = () => {
 
                     {/* Inner Pulsing Circle */}
                     <div className="relative flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-[#be95be] to-[#8a5f8a] shadow-[0_0_40px_rgba(190,149,190,0.5)]">
-                        <span className="text-4xl font-bold text-white">T</span>
+                        <span className="text-4xl font-bold text-white">TF</span>
 
                         {/* Ping Effect */}
                         <span className="absolute inset-0 rounded-full bg-[#be95be] animate-ping opacity-30" />

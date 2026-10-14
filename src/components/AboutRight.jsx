@@ -64,7 +64,7 @@ const AboutRight = () => {
         },
     ];
 
-    // ✅ Right Ring Skills
+    // ✅ Right Ring Skills (Express.js added)
     const rightSkills = [
         {
             name: "React",
@@ -81,12 +81,12 @@ const AboutRight = () => {
             ),
         },
         {
-            name: "Next.js",
+            name: "Express.js",
             size: 38.8,
             svg: (
-                <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
-                    <rect width="24" height="24" fill="#000000"></rect>
-                    <path d="M14.6 15.5l-3.8-5.8h-.3v5.8H9V8.5h1.8l3.8 5.8h.3V8.5h1.5v7h-1.8z" fill="#fff"></path>
+                <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                    <rect width="256" height="256" rx="60" fill="#1A1A1A"></rect>
+                    <text x="50%" y="57%" textAnchor="middle" fill="white" fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="120" letterSpacing="1">ex</text>
                 </svg>
             ),
         },
@@ -128,7 +128,7 @@ const AboutRight = () => {
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
             >
-                {/* ================= PULSING RING 1 ================= */}
+                {/*  PULSING RING 1  */}
                 <div
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
                     style={{ width: "172.444px", height: "172.444px", animationDelay: "0s" }}
@@ -152,7 +152,7 @@ const AboutRight = () => {
                     ></div>
                 </div>
 
-                {/* ================= PULSING RING 2 ================= */}
+                {/*  PULSING RING 2  */}
                 <div
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
                     style={{ width: "310.4px", height: "310.4px", animationDelay: "1.5s" }}
@@ -176,9 +176,9 @@ const AboutRight = () => {
                     ></div>
                 </div>
 
-                {/* ================= CENTER CODE ICON ================= */}
+                {/*  CENTER CODE ICON (z-0 - Neeche)  */}
                 <div
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#3d2a3d]/90 backdrop-blur-lg rounded-full flex items-center justify-center border-2 border-[#be95be]/30 shadow-[0_0_40px_rgba(190,149,190,0.9)] z-10"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#3d2a3d]/90 backdrop-blur-lg rounded-full flex items-center justify-center border-2 border-[#be95be]/30 shadow-[0_0_40px_rgba(190,149,190,0.9)] z-0"
                     style={{ width: "110.364px", height: "110.364px" }}
                 >
                     <svg
@@ -197,9 +197,9 @@ const AboutRight = () => {
                     </svg>
                 </div>
 
-                {/* ================= LEFT RING ================= */}
+                {/*  LEFT RING  */}
                 <div
-                    className="absolute top-1/2 left-1/2 "
+                    className="absolute top-1/2 left-1/2"
                     style={{
                         transform: `translate(-50%, -50%) rotate(${rotationLeft}deg)`,
                         width: 0,
@@ -216,7 +216,7 @@ const AboutRight = () => {
                         return (
                             <div
                                 key={index}
-                                className="group  absolute transition-all duration-300 ease-out hover:!z-[999]"
+                                className="group absolute transition-all duration-300 ease-out hover:!z-[999]"
                                 style={{
                                     width: `${skill.size}px`,
                                     height: `${skill.size}px`,
@@ -225,28 +225,27 @@ const AboutRight = () => {
                                 }}
                             >
                                 <div
-                                    className="relative  w-full h-full p-2 bg-[#3d2a3d]/60 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:scale-125"
+                                    className="relative w-full h-full p-2 bg-[#3d2a3d]/60 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:scale-125"
                                     style={{ transform: `rotate(${-rotationLeft}deg)` }}
                                 >
                                     {skill.svg}
                                 </div>
 
-                                {/* ✅ Hover Name with z-[999] */}
+                                {/* Hover Name */}
                                 <div
-                                    className="absolute rounded-full  left-1/2 -translate-x-1/2 top-full bg-[#4a2c4a]/95 px-3 py-1 backdrop-blur-sm shadow-lg mt-0.5 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap z-10"
+                                    className="absolute rounded-full left-1/2 -translate-x-1/2 top-full bg-[#4a2c4a]/95 px-3 py-1 backdrop-blur-sm shadow-lg mt-0.5 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap z-10"
                                     style={{ transform: `translateX(-30%) rotate(${-rotationLeft}deg)` }}
                                 >
-
-                                        <span className="text-sm uppercase text-white">
-                                            {skill.name}
-                                        </span>
+                                    <span className="text-sm uppercase text-white">
+                                        {skill.name}
+                                    </span>
                                 </div>
                             </div>
                         );
                     })}
                 </div>
 
-                {/* ================= RIGHT RING ================= */}
+                {/*  RIGHT RING  */}
                 <div
                     className="absolute top-1/2 left-1/2"
                     style={{
@@ -280,14 +279,14 @@ const AboutRight = () => {
                                     {skill.svg}
                                 </div>
 
-                                {/* ✅ Hover Name with z-[999] */}
+                                {/* Hover Name */}
                                 <div
                                     className="absolute rounded-full border border-[#be95be]/40 bg-[#4a2c4a]/95 px-3 py-1 backdrop-blur-sm shadow-lg left-1/2 -translate-x-1/2 top-full mt-0.5 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap z-20"
                                     style={{ transform: `translateX(-30%) rotate(${-rotationRight}deg)` }}
                                 >
-                                        <span className="text-sm uppercase text-white">
-                                            {skill.name}
-                                        </span>
+                                    <span className="text-sm uppercase text-white">
+                                        {skill.name}
+                                    </span>
                                 </div>
                             </div>
                         );

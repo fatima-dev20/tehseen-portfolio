@@ -13,47 +13,44 @@ const Experience = () => {
     // ✅ Education Data
     const education = [
         {
-            degree: "Bachelor of Computer Science",
-            institution: "University Name",
-            period: "2021 - 2025",
-            grade: "CGPA: 3.5/4.0",
-            description:
-                "Specialized in web development, software engineering, and database management. Completed multiple MERN stack projects.",
+            degree: "Bachelor of Information Technology",
+            institution: "The Islamia University of Bahawalpur",
+            period: "2022 - 2026",
         },
         {
-            degree: "Intermediate (Pre-Engineering)",
-            institution: "College Name",
-            period: "2019 - 2021",
-            grade: "Grade: A+",
-            description:
-                "Completed intermediate education with focus on Mathematics, Physics, and Computer Science.",
+            degree: "Intermediate (ICS)",
+            institution: "Govt. Associate College For Women Dahranwala  ",
+            period: "2020 - 2022",
         },
     ];
 
     // ✅ Experience Data
     const experiences = [
-        {
-            title: "MERN Stack Developer Trainee",
-            company: "Quran Academy",
-            period: "2025 - Present",
-            type: "Remote",
-            description: [
-                "Developed full-stack web applications using MERN stack",
-                "Implemented JWT authentication and OTP verification",
-                "Built Cloudinary image upload system with Multer",
-            ],
-        },
-        {
-            title: "Freelance Web Developer",
-            company: "Self-Employed",
-            period: "2024 - 2025",
-            type: "Remote",
-            description: [
-                "Built 8+ frontend projects using React and Tailwind CSS",
-                "Created responsive and modern user interfaces",
-                "Collaborated with clients to deliver custom solutions",
-            ],
-        },
+
+    {
+        title: "MERN Stack Developer Trainee",
+        company: "CodeLab Pvt. Ltd.",
+        period: "Jun 2026 - Sep 2026",
+        type: "Remote",
+        description: [
+            "Developed responsive web applications using React.js, JavaScript, HTML5, CSS3, and Tailwind CSS with reusable components.",
+            "Built RESTful APIs and backend services using Node.js, Express.js, MongoDB, and Mongoose.",
+            "Implemented Redux Toolkit, RTK Query, JWT authentication, and Role-Based Access Control (RBAC).",
+            "Integrated Nodemailer for transactional emails and managed Git/GitHub workflows.",
+        ],
+    },
+    {
+        title: "Frontend Developer",
+        company: "CodesLab Pvt. Ltd.",
+        period: "Jun 2025 - May 2026",
+        type: "Remote",
+        description: [
+            "Developed responsive web interfaces using React.js, JavaScript, HTML5, and CSS3.",
+            "Built reusable React components to improve code structure and maintainability.",
+            "Created responsive layouts compatible with desktop, tablet, and mobile devices.",
+        ],
+    },
+
         {
             title: "Seeking Internship",
             company: "MERN Stack Development",
@@ -69,11 +66,11 @@ const Experience = () => {
     ];
 
     return (
-        <section id="journey" className="relative py-20  overflow-hidden">
+        <section id="journey" className="relative pt-24  overflow-hidden">
 
             <div className="relative mx-auto max-w-4xl w-full px-6 lg:px-10">
 
-                {/* ================= HEADING ================= */}
+                {/*  HEADING  */}
                 <div
                     className={`text-center mb-12 transition-all duration-700 ${
                         mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -86,10 +83,11 @@ const Experience = () => {
                         Education &{" "}
                         <span className="text-[#be95be]">Experience</span>
                     </h2>
+                    <div className="w-20 h-1 bg-gradient-to-r from-[#be95be] to-[#8a5f8a] mx-auto mt-4 rounded-full" />
                     
                 </div>
 
-                {/* ================= TABS ================= */}
+                {/*  TABS  */}
                 <div
                     className={`flex justify-center mb-12 transition-all duration-700 delay-100 ${
                         mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -125,12 +123,12 @@ const Experience = () => {
                     </div>
                 </div>
 
-                {/* ================= TIMELINE ================= */}
+                {/*  TIMELINE  */}
                 <div className="relative">
                     {/* Vertical Line */}
                     <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#be95be]/40 via-[#be95be]/20 to-transparent md:-translate-x-1/2" />
 
-                    {/* ================= EXPERIENCE TAB ================= */}
+                    {/*  EXPERIENCE TAB  */}
                     {activeTab === "experience" && (
                         <div className="animate-fadeIn">
                             {experiences.map((exp, index) => (
@@ -227,7 +225,7 @@ const Experience = () => {
                         </div>
                     )}
 
-                    {/* ================= EDUCATION TAB ================= */}
+                    {/*  EDUCATION TAB  */}
                     {activeTab === "education" && (
                         <div className="animate-fadeIn">
                             {education.map((edu, index) => (

@@ -41,13 +41,13 @@ const Home = () => {
     return (
         <section
             id="home"
-            className="relative  flex items-center  overflow-hidden pt-28 md:pt-20 pb-5"
+            className="relative  flex items-center  overflow-hidden pt-28 md:pt-20 "
         >
 
             <div className="relative mx-auto max-w-7xl w-full   px-6 lg:px-16">
                 <div className="grid lg:grid-cols-12 gap-12 items-center">
 
-                    {/* ================= LEFT SIDE ================= */}
+                    {/*  LEFT SIDE  */}
                     <div className="lg:col-span-6 w-full text-center lg:text-start">
 
                         {/* Hello */}
@@ -57,7 +57,7 @@ const Home = () => {
 
                         {/* Name */}
                         <h1 className="text-[#be95be] text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-2 mt-2">
-                            Tehseen Chaudhry
+                            Tehseen Fatima
                         </h1>
 
                         {/* Typing Animation */}
@@ -72,10 +72,10 @@ const Home = () => {
                         {/* Description */}
                         <p className="text-gray-300 text-base sm:text-lg mb-8 max-w-lg mx-auto lg:mx-0">
                             A passionate <span className="text-white font-semibold">MERN Stack Developer</span> focused on building modern,
-                             responsive web applications with clean code and intuitive user experiences. 
+                            responsive web applications with clean code and intuitive user experiences.
 
                         </p>
-                        
+
 
                         {/* CTA Buttons */}
                         <div className="flex  flex-row gap-3 sm:gap-4 mb-6 items-center lg:items-start justify-center lg:justify-start">
@@ -94,7 +94,7 @@ const Home = () => {
 
                             {/* Download CV */}
                             <a
-                                href="/resume.pdf"
+                                href="/Tehseen_Fatima_MERN_Stack.pdf"
                                 download
                                 className="relative border-2 border-[#be95be] text-[#be95be] px-5 py-2.5  rounded-xl font-semibold text-base flex items-center gap-2 transition-all duration-500 transform hover:scale-110 hover:bg-[#be95be] hover:text-white shadow-md group overflow-hidden whitespace-nowrap"
                             >
@@ -110,7 +110,7 @@ const Home = () => {
 
                                 {/* GitHub */}
                                 <a
-                                    href="https://github.com/yourusername"
+                                    href="https://github.com/fatima-dev20"
                                     target="_blank"
                                     rel="noreferrer"
                                     aria-label="GitHub"
@@ -123,7 +123,7 @@ const Home = () => {
 
                                 {/* LinkedIn */}
                                 <a
-                                    href="https://linkedin.com/in/yourusername"
+                                    href="https://www.linkedin.com/in/tehseen-fatima-957a07370/"
                                     target="_blank"
                                     rel="noreferrer"
                                     aria-label="LinkedIn"
@@ -138,18 +138,18 @@ const Home = () => {
                         </div>
                     </div>
 
-                    {/* ================= RIGHT SIDE ================= */}
+                    {/*  RIGHT SIDE  */}
                     <div className="relative flex min-h-[530px] items-center justify-center lg:col-span-6 lg:min-h-[570px]">
 
                         {/* Rotating Dashed Ring */}
                         <div
-                            className="absolute h-[380px] w-[380px] rounded-full border-2 border-dashed border-[#be95be]/30 sm:h-[440px] sm:w-[440px] lg:h-[460px] lg:w-[460px]"
+                            className="absolute h-[380px] w-[380px] rounded-full border-2 border-dashed border-[#be95be]/70 sm:h-[440px] sm:w-[440px] lg:h-[460px] lg:w-[460px]"
                             style={{ animation: "spin 30s linear infinite" }}
                         />
 
                         {/* Rotating Dotted Ring */}
                         <div
-                            className="absolute h-[420px] w-[420px] rounded-full border border-[#9d72ff]/20 sm:h-[480px] sm:w-[480px] lg:h-[500px] lg:w-[500px]"
+                            className="absolute h-[420px] w-[420px] rounded-full border border-[#9d72ff]/40 sm:h-[480px] sm:w-[480px] lg:h-[500px] lg:w-[500px]"
                             style={{ animation: "spin 40s linear infinite reverse" }}
                         />
 
@@ -180,21 +180,17 @@ const Home = () => {
 
                             {/* BADGE - Bottom Right */}
                             <div className="group absolute bottom-[10px] right-[-10px] z-40 flex items-center gap-3 rounded-2xl border border-white/15 bg-[#090e1d]/95 px-4 py-3 shadow-[0_15px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#9d72ff]/30 hover:shadow-[0_15px_45px_rgba(139,92,246,0.2)] sm:right-[-20px]">
-                                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#8b5cf6]/10 text-[#9d72ff] transition-transform duration-300 group-hover:scale-110">
-                                    <BarChart3 size={22} />
-                                </div>
-                                <div>
-                                    <div className="text-xl font-bold leading-none text-white">
-                                        9+
-                                    </div>
-                                    <div className="mt-1 text-[10px] text-[#a3aab6]">
-                                        Projects Done
-                                    </div>
+
+                                <div className="flex items-center gap-2">
+                                    <span className="h-2 w-2 rounded-full bg-green-500"></span>
+                                    <span className="text-sm text-green-500">
+                                        Open to MERN Internship
+                                    </span>
                                 </div>
                             </div>
 
                             {/* FRONTEND BADGE - Top Left */}
-                            
+
                         </div>
                     </div>
                 </div>

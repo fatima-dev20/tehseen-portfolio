@@ -12,74 +12,72 @@ const Projects = () => {
 
     // ✅ Projects Data
     const projects = [
-        {
-            title: "Quran Academy Platform",
-            description:
-                "Full-stack MERN application for online Quran learning with authentication, OTP verification, and role-based access control.",
-            image: "/projects/quran-academy.jpg",
-            tech: ["React", "Node.js", "MongoDB", "Express"],
-            github: "https://github.com/yourusername/quran-academy",
-            live: "https://quran-academy.vercel.app",
-            category: "Full Stack",
-        },
-        {
-            title: "E-Commerce Store",
-            description:
-                "Modern e-commerce platform with product management, cart, checkout, and secure payment integration.",
-            image: "/projects/ecommerce.jpg",
-            tech: ["React", "Redux", "Node.js", "MongoDB"],
-            github: "https://github.com/yourusername/ecommerce",
-            live: "https://ecommerce.vercel.app",
-            category: "Full Stack",
-        },
-        {
-            title: "Task Management App",
-            description:
-                "Collaborative task management tool with real-time updates and team collaboration features.",
-            image: "/projects/task-app.jpg",
-            tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-            github: "https://github.com/yourusername/task-app",
-            live: "https://task-app.vercel.app",
-            category: "Full Stack",
-        },
-        {
-            title: "Weather Dashboard",
-            description:
-                "Beautiful weather dashboard with real-time data, forecasts, and location-based search.",
-            image: "/projects/weather.jpg",
-            tech: ["React", "Tailwind CSS", "API"],
-            github: "https://github.com/yourusername/weather",
-            live: "https://weather.vercel.app",
-            category: "Frontend",
-        },
-        {
-            title: "Portfolio Website",
-            description:
-                "Modern, responsive personal portfolio with dark theme and smooth animations.",
-            image: "/projects/portfolio.jpg",
-            tech: ["React", "Tailwind CSS", "Lucide"],
-            github: "https://github.com/yourusername/portfolio",
-            live: "https://yourportfolio.vercel.app",
-            category: "Frontend",
-        },
-        {
-            title: "Todo App",
-            description:
-                "Clean and minimal todo application with localStorage support and drag-and-drop.",
-            image: "/projects/todo.jpg",
-            tech: ["React", "Tailwind CSS", "LocalStorage"],
-            github: "https://github.com/yourusername/todo",
-            live: "https://todo.vercel.app",
-            category: "Frontend",
-        },
-    ];
+    // 1. Full Stack
+    {
+        title: "Quran Academy Platform",
+        description:
+            "Full-stack MERN application for online Quran learning with JWT authentication, OTP verification, role-based access, and Cloudinary image upload.",
+        image: "/online-quran-project-img.png",
+        tech: ["React", "Node.js", "MongoDB", "Express"],
+        github: "https://github.com/fatima-dev20/al-hafiz-online",
+        live: "https://al-hafiz-online-quran.vercel.app",
+        category: "Full Stack",
+    },
 
+    // 2. Frontend - Cleaning Service
+    {
+        title: "Akoya Deluxe Cleaning Services",
+        description:
+            "A polished business website for a premium cleaning brand with service showcases, instant quote requests, and a clean, modern UI.",
+        image: "/akoya-project-img.png",
+        tech: ["React", "Tailwind CSS", "Redux Toolkit"],
+        github: "https://github.com/fatima-dev20/akoya-deluxe",
+        live: "https://lundary-rose.vercel.app",
+        category: "Frontend",
+    },
+
+    // 3. Frontend - Consulting
+    {
+        title: "Mobilia Consulting",
+        description:
+            "A professional consulting website with service pages, smooth animations, and a modern, responsive layout built for lead generation.",
+        image: "/mobilia-consulting-project-img.png",
+        tech: ["React", "Tailwind CSS", "Framer Motion"],
+        github: "https://github.com/fatima-dev20/mobilia-consulting",
+        live: "https://mobilia-consulting-eta.vercel.app",
+        category: "Frontend",
+    },
+
+    // 4. Frontend - Sweet Cake
+    {
+        title: "Sweet Cakes Bakery",
+        description:
+            "A delicious bakery website with product gallery, smooth animations, and a modern, responsive design for showcasing sweet treats.",
+        image: "/sweet-cake-project-image.png",
+        tech: ["React", "Tailwind CSS", "Contect API"],
+        github: "https://github.com/fatima-dev20/sweet-cakes",
+        live: "https://sweet-cakes-beige.vercel.app",
+        category: "Frontend",
+    },
+
+    // 5. Frontend - Shipment Dashboard
+    {
+        title: "Shipment Dashboard",
+        description:
+            "A modern shipment tracking dashboard with data visualization, analytics, and a clean, responsive interface.",
+        image: "/dashboard-project-image.png",
+        tech: ["React", "Tailwind CSS", "Recharts"],
+        github: "https://github.com/fatima-dev20/shipment-dashboard",
+        live: "https://shipment-dashboard-lyart.vercel.app",
+        category: "Frontend",
+    },
+];
     return (
-        <section id="projects" className="relative py-5  overflow-hidden">
+        <section id="projects" className="relative pt-24  overflow-hidden">
 
             <div className="relative mx-auto max-w-7xl w-full px-6 lg:px-10">
 
-                {/* ================= HEADING ================= */}
+                {/*  HEADING  */}
                 <div
                     className={`text-center mb-16 transition-all duration-700 ${
                         mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -94,7 +92,7 @@ const Projects = () => {
                     <h3 className="text-gray-500 mt-3">Modern web applications built with React,</h3>
                 </div>
 
-                {/* ================= PROJECTS GRID ================= */}
+                {/*  PROJECTS GRID  */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projects.map((project, index) => (
                         <div
@@ -195,7 +193,7 @@ const Projects = () => {
                     ))}
                 </div>
 
-                {/* ================= VIEW ALL BUTTON ================= */}
+                {/*  VIEW ALL BUTTON  */}
                 <div
                     className={`mt-14 flex justify-center transition-all duration-700 delay-500 ${
                         mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
