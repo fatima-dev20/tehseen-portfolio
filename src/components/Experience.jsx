@@ -28,7 +28,7 @@ const Experience = () => {
     const experiences = [
         {
             title: "MERN Stack Developer Trainee",
-            company: "CodeLab Pvt. Ltd.",
+            company: " Codes Thinker Pvt. Ltd.",
             period: "Jun 2026 - Sep 2026",
             type: "Remote",
             description: [
@@ -40,7 +40,7 @@ const Experience = () => {
         },
         {
             title: "Frontend Developer",
-            company: "CodesLab Pvt. Ltd.",
+            company: " Codes Thinker Pvt. Ltd.",
             period: "Jun 2025 - May 2026",
             type: "Remote",
             description: [
@@ -67,7 +67,7 @@ const Experience = () => {
         <section id="journey" className="relative pt-16 sm:pt-20 lg:pt-24 overflow-hidden">
             <div className="relative mx-auto max-w-4xl w-full px-4 sm:px-6 lg:px-10">
 
-                {/* ================= HEADING ================= */}
+                {/*  HEADING  */}
                 <div
                     data-aos="fade-up"
                     data-aos-duration="800"
@@ -83,7 +83,7 @@ const Experience = () => {
                     <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-[#be95be] to-[#8a5f8a] mx-auto mt-3 sm:mt-4 rounded-full" />
                 </div>
 
-                {/* ================= TABS ================= */}
+                {/*  TABS  */}
                 <div
                     data-aos="fade-up"
                     data-aos-duration="800"
@@ -119,12 +119,12 @@ const Experience = () => {
                     </div>
                 </div>
 
-                {/* ================= TIMELINE ================= */}
+                {/*  TIMELINE  */}
                 <div className="relative">
                     {/* Vertical Line */}
                     <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#be95be]/40 via-[#be95be]/20 to-transparent md:-translate-x-1/2" />
 
-                    {/* ================= EXPERIENCE TAB ================= */}
+                    {/*  EXPERIENCE TAB  */}
                     {activeTab === "experience" && (
                         <div className="animate-fadeIn">
                             {experiences.map((exp, index) => (
@@ -224,7 +224,7 @@ const Experience = () => {
                         </div>
                     )}
 
-                    {/* ================= EDUCATION TAB ================= */}
+                    {/*  EDUCATION TAB  */}
                     {activeTab === "education" && (
                         <div className="animate-fadeIn">
                             {education.map((edu, index) => (
