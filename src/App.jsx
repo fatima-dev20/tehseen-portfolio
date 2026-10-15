@@ -13,6 +13,8 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -30,6 +32,13 @@ function App() {
         return <Loading />;
     }
 
+
+// ✅ AOS Initialize
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100,
+});
     return (
         <div className="min-h-screen bg-[#0a0a0a] overflow-x-hidden">
             <Navbar />

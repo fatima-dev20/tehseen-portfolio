@@ -21,7 +21,7 @@ import {
     SiGithub,
 } from "react-icons/si";
 
-const TechMarquee = () => {
+const Skills = () => {
     // ✅ Backend Skills
     const backendSkills = [
         { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
@@ -53,9 +53,9 @@ const TechMarquee = () => {
     // ✅ Marquee Row Component
     const MarqueeRow = ({ label, skills, direction = "left" }) => (
         <div className="relative">
-            <div className="border  border-white/10 rounded-xl flex items-stretch overflow-hidden bg-white/[0.02]">
+            <div className="border border-white/10 rounded-xl flex items-stretch overflow-hidden bg-white/[0.02]">
                 {/* Category Label */}
-                <div className="group  relative flex items-center justify-center shrink-0 w-24 md:w-32 border-r border-white/10 bg-white/[0.02] transition-colors duration-300 hover:bg-white/[0.05] cursor-default overflow-hidden">
+                <div className="group relative flex items-center justify-center shrink-0 w-24 md:w-32 border-r border-white/10 bg-white/[0.02] transition-colors duration-300 hover:bg-white/[0.05] cursor-default overflow-hidden">
                     <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#be95be] transition-all duration-500 group-hover:w-full"></span>
                     <span className="text-[#be95be] text-xs md:text-sm font-semibold uppercase tracking-wider transition-colors duration-300 group-hover:text-[#d4b8d4]">
                         {label}
@@ -63,7 +63,7 @@ const TechMarquee = () => {
                 </div>
 
                 {/* Marquee Row */}
-                <div className="relative overflow-x-hidden  flex-1 py-4">
+                <div className="relative overflow-x-hidden flex-1 py-4">
                     {/* Left Fade */}
                     <div className="pointer-events-none absolute left-0 top-0 h-full w-8 md:w-14 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10" />
                     {/* Right Fade */}
@@ -71,7 +71,7 @@ const TechMarquee = () => {
 
                     {/* Track */}
                     <div
-                        className={`flex items-center gap-10 w-max  ${
+                        className={`flex items-center gap-10 w-max ${
                             direction === "left"
                                 ? "animate-marquee-left"
                                 : "animate-marquee-right"
@@ -80,7 +80,7 @@ const TechMarquee = () => {
                         {/* First Set */}
                         <div className="flex items-center gap-10 shrink-0">
                             {skills.map((skill, index) => (
-                                <div key={index} className="relative group ">
+                                <div key={index} className="relative group">
                                     {/* Icon Box */}
                                     <div
                                         className={`flex items-center justify-center w-12 h-12 rounded-xl bg-white/[0.03] border border-white/10 text-2xl ${skill.color} transition-all duration-300 group-hover:scale-110 group-hover:border-[#be95be]/40 group-hover:bg-[#be95be]/[0.05]`}
@@ -88,9 +88,9 @@ const TechMarquee = () => {
                                         {skill.icon}
                                     </div>
 
-                                    {/* ✅ Tooltip - Icon Ke Saath (Up) */}
+                                    {/* Tooltip */}
                                     <div className="absolute left-1/2 -translate-x-1/2 -top-5 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap z-50">
-                                        <div className="rounded-full border border-[#be95be]/40 bg-[#4a2c4a]/95 px-3 mt-1 py-1  backdrop-blur-sm shadow-lg">
+                                        <div className="rounded-full border border-[#be95be]/40 bg-[#4a2c4a]/95 px-3 mt-1 py-1 backdrop-blur-sm shadow-lg">
                                             <span className="text-[10px] font-semibold uppercase tracking-wider text-white">
                                                 {skill.name}
                                             </span>
@@ -101,9 +101,9 @@ const TechMarquee = () => {
                         </div>
 
                         {/* Duplicate Set */}
-                        <div className="flex items-center  gap-10 shrink-0" aria-hidden="true">
+                        <div className="flex items-center gap-10 shrink-0" aria-hidden="true">
                             {skills.map((skill, index) => (
-                                <div key={index} className="relative group ">
+                                <div key={index} className="relative group">
                                     {/* Icon Box */}
                                     <div
                                         className={`flex items-center justify-center w-12 h-12 rounded-xl bg-white/[0.03] border border-white/10 text-2xl ${skill.color} transition-all duration-300 group-hover:scale-110 group-hover:border-[#be95be]/40 group-hover:bg-[#be95be]/[0.05]`}
@@ -111,7 +111,7 @@ const TechMarquee = () => {
                                         {skill.icon}
                                     </div>
 
-                                    {/* ✅ Tooltip - Icon Ke Saath (Up) */}
+                                    {/* Tooltip */}
                                     <div className="absolute left-1/2 -translate-x-1/2 -top-5 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap z-50">
                                         <div className="rounded-full border border-[#be95be]/40 bg-[#4a2c4a]/95 px-3 mt-1 py-1 backdrop-blur-sm shadow-lg">
                                             <span className="text-[10px] font-semibold uppercase tracking-wider text-white">
@@ -129,25 +129,49 @@ const TechMarquee = () => {
     );
 
     return (
-        <section id="skills" className="relative pt-24 overflow-hidden">
-            <div className="relative mx-auto max-w-6xl w-full px-6 lg:px-10">
-                {/* Heading */}
-                <div className="text-center mb-14">
-                    <p className="text-[#be95be] font-mono tracking-widest text-sm uppercase mb-2">
+        <section id="skills" className="relative pt-16 sm:pt-20 lg:pt-24 overflow-hidden">
+            <div className="relative mx-auto max-w-6xl w-full px-4 sm:px-6 lg:px-10">
+                {/* HEADING */}
+                <div
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                    className="text-center mb-10 sm:mb-14"
+                >
+                    <p className="text-[#be95be] font-mono tracking-widest text-xs sm:text-sm uppercase mb-2">
                         — Tech Stack
                     </p>
-                    <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold">
+                    <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
                         Technologies I{" "}
                         <span className="text-[#be95be]">work with</span>
                     </h2>
-                    <div className="w-20 h-1 bg-gradient-to-r from-[#be95be] to-[#8a5f8a] mx-auto mt-4 rounded-full" />
+                    <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-[#be95be] to-[#8a5f8a] mx-auto mt-3 sm:mt-4 rounded-full" />
                 </div>
 
-                {/* Marquee Rows */}
-                <div className="space-y-4 ">
-                    <MarqueeRow label="Backend" skills={backendSkills} direction="left" />
-                    <MarqueeRow label="Frontend" skills={frontendSkills} direction="right" />
-                    <MarqueeRow label="Tools" skills={toolsSkills} direction="left" />
+                {/* MARQUEE ROWS */}
+                <div className="space-y-4">
+                    <div
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                        data-aos-delay="200"
+                    >
+                        <MarqueeRow label="Backend" skills={backendSkills} direction="left" />
+                    </div>
+
+                    <div
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                        data-aos-delay="400"
+                    >
+                        <MarqueeRow label="Frontend" skills={frontendSkills} direction="right" />
+                    </div>
+
+                    <div
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                        data-aos-delay="600"
+                    >
+                        <MarqueeRow label="Tools" skills={toolsSkills} direction="left" />
+                    </div>
                 </div>
             </div>
 
@@ -180,4 +204,4 @@ const TechMarquee = () => {
     );
 };
 
-export default TechMarquee;
+export default Skills;

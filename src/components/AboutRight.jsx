@@ -121,10 +121,10 @@ const AboutRight = () => {
     ];
 
     return (
-        <main className="w-full flex items-center justify-center overflow-hidden py-10">
+       <main className="w-full flex items-center justify-center overflow-hidden py-4 sm:py-6 lg:py-10 px-0">
             <div
-                className="relative flex items-center justify-center"
-                style={{ width: "388px", height: "388px" }}
+                className="relative flex items-center justify-center scale-[0.90] xs:scale-[0.95] sm:scale-90 md:scale-95 lg:scale-100 origin-center mx-auto"
+                style={{ width: "380px", height: "380px" }}
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
             >
@@ -154,7 +154,7 @@ const AboutRight = () => {
 
                 {/*  PULSING RING 2  */}
                 <div
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
+                    className="absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
                     style={{ width: "310.4px", height: "310.4px", animationDelay: "1.5s" }}
                 >
                     <div
