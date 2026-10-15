@@ -30,7 +30,7 @@ const Experience = () => {
             title: "MERN Stack Developer Trainee",
             company: " Codes Thinker Pvt. Ltd.",
             period: "Jun 2026 - Sep 2026",
-            type: "Onsite",
+            type: "On-site",
             description: [
                 "Developed responsive web applications using React.js, JavaScript, HTML5, CSS3, and Tailwind CSS with reusable components.",
                 "Built RESTful APIs and backend services using Node.js, Express.js, MongoDB, and Mongoose.",
@@ -42,7 +42,7 @@ const Experience = () => {
             title: "Frontend Developer",
             company: " Codes Thinker Pvt. Ltd.",
             period: "Jun 2025 - May 2026",
-            type: "Onsite",
+            type: "On-site",
             description: [
                 "Developed responsive web interfaces using React.js, JavaScript, HTML5, and CSS3.",
                 "Built reusable React components to improve code structure and maintainability.",
@@ -53,7 +53,7 @@ const Experience = () => {
             title: "Seeking Internship",
             company: "MERN Stack Development",
             period: "Available Now",
-            type: "Remote / On-site",
+            type: "On-site",
             current: true,
             description: [
                 "Actively looking for MERN Stack internship opportunities",
